@@ -38,4 +38,24 @@ export const routes: Routes = [
 <div>
   <router-outlet></router-outlet>
 </div>
-//---------------------------------------------------------------------------------
+//--------------------------------------in the admin route-------------------------------------------
+  const routes: Routes = [
+  {
+    path: '',
+    component: MenuadminComponent,
+    children: [
+      { path: 'alpha', component: AlphaComponent },
+      { path: 'beta', component: BetaComponent },
+    ],
+  }
+];
+--------------------------------------menuadmin------------------
+<div>
+  <span><a routerLink='/admin/alpha'> Alpha</a> </span> |
+  <span><a routerLink='/admin/beta'> Beta</a> </span>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
